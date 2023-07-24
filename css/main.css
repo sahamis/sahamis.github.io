@@ -10,7 +10,8 @@ body {
   min-height:100vh;
 }
 .content-container{
-  flex-grow:1;
+  display:flex;
+  flex:1 1 auto;
   padding-top:10vh;
   width:100%;
 }
@@ -25,8 +26,8 @@ a {
   color: #6397b5;
 }
 p{
-  margin:0.75em 0;
   line-height:1.5;
+  margin:0.75em 0;
 }
 h2 ~ p {
   font-size: 0.8em;
@@ -208,22 +209,20 @@ h2 ~ p {
   display:flex;
   padding:7vh 0;
 }
-.home-callout h3{
-  color:inherir;
+.home-callouth3{
+  color:inherit;
   margin-top:1em;
 }
 .callout-title{
-  flex-grow:1;
-  flex-basis:0;
+  flex:1;
   font-size:5.75vw;
   text-align:right;
   text-transform:uppercase;
 }
 .callout-copy{
-  flex-shrink:0;
-  flex-basis:45em;
+  flex:0 0 45em;
   font-size:0.8rem;
-  padding:0 3vw;
+  padding:0 3vw; 
 }
 
 /* バイオグラフィースタイル */
@@ -257,4 +256,26 @@ h2 ~ p {
 }
 .bio-copy {
   font-size: 0.75em;
+}
+
+/* カラムスタイル */
+.col-three{
+  display:flex;
+  flex:1 1 0;
+}
+.col{
+  box-sizing:border-box;
+  padding:2em;
+}
+.col-three .col~.col{
+  border-left:1px solid rgba(0,0,0,0.1);
+}
+.col-three .col-nav{
+  flex:0 1 15em;
+}
+.col-three .col-content{
+  flex:1 1 0;
+}
+.col-three .col-aside{
+  flex:0 1 20em;
 }
